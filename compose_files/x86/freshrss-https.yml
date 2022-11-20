@@ -35,25 +35,10 @@ services:
 
 
 # ---------------------------------------- ttrss ---------------------------------------- #
-  freshrss.db:
-    image: postgres:12-alpine
-    hostname: freshrss.db
-    restart: unless-stopped
-    volumes:
-      - ./db:/var/lib/postgresql/data
-    environment:
-      POSTGRES_USER: ${POSTGRES_USER:-freshrss}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-freshrss}
-      POSTGRES_DB: ${POSTGRES_DB:-freshrss}
-    networks:
-      - rssforever
-
   service.rss:
-    image: freshrss/freshrss:${FRESHRSS_X86_VERSION}
+    image: linuxserver/freshrss:latest
     hostname: freshrss-app
     restart: unless-stopped
-    depends_on:
-      - freshrss.db
     volumes:
       - ./data:/var/www/FreshRSS/data
       - ./extensions:/var/www/FreshRSS/extensions
