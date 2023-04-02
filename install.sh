@@ -350,7 +350,7 @@ EOF
     docker rm ${TEMP} >/dev/null 2>&1
 
     # check
-    if [ ! -f "${WORK_PATH}/${TEMP}/${DOMAIN}/fullchain.cer" ] ; then
+    if [ ! -f "${WORK_PATH}/${TEMP}/${DOMAIN}_ecc/fullchain.cer" ] ; then
         echo -e "${Green}证书申请失败,请重新尝试,已退出脚本.${Font}"
         exit 0
     else
