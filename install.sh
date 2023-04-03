@@ -360,7 +360,7 @@ EOF
 }
 
 git_clone (){
-    git clone https://github.com/stilleshan/rssforever.git
+    git clone https://github.com/torinkan/rssforever.git
     conf_domain
 }
 
