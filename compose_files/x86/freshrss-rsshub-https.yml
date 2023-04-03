@@ -37,7 +37,7 @@ services:
 
 # ---------------------------------------- ttrss ---------------------------------------- #
   service.rss:
-    image: linuxserver/freshrss:latest
+    image: freshrss/freshrss:${FRESHRSS_X86_VERSION}
     hostname: freshrss-app
     restart: unless-stopped
     volumes:
