@@ -45,7 +45,7 @@
 
 ### 执行脚本
 ```shell
-wget https://raw.githubusercontent.com/stilleshan/rssforever/main/install.sh && chmod +x install.sh && ./install.sh
+wget https://raw.githubusercontent.com/torinkan/rssforever/main/install.sh && chmod +x install.sh && ./install.sh
 ```
 
 ## 使用
